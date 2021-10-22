@@ -1,0 +1,26 @@
+    1  man blkid
+    2  man dd
+    3  man losetup
+    4  man mkfs
+    5  man tune2fs
+    6  man debugfs
+    7  man mount
+    8  ls -l /dev/sda{,[123]}
+    9  lsblk --list
+   10  cat /proc/diskstats
+   11  cat /proc/devices
+   12  dd if=/dev/zero of=./fs.img bs=1M count=10
+   13  losetup --find --show ./fs.img
+   14  losetup --list
+   15  mkfs -t ext4 /dev/loop0
+   16  blkid /dev/loop0
+   17  mount /dev/loop0 /mnt
+   18  sudo mount /dev/loop0 /mnt
+   19  mount | grep /mnt
+   20  df -h /mnt
+   21  df -hi /mnt
+   22  umount /dev/loop0
+   23  tune2fs -l /dev/loop0
+   24  losetup --detach /dev/loop0
+   25  losetup --list
+   26  history > lab6_history.txt
