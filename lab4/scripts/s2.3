@@ -1,0 +1,14 @@
+#!/bin/bash
+
+grep "000000" ~/BashLabs/bash.txt > /tmp/zeros
+echo "first ten lines of /tmp/zeros:"
+head -n10 /tmp/zeros
+echo "last ten lines of /tmp/zeros:"
+tail -n10 /tmp/zeros
+
+
+grep -v "000000" ~/BashLabs/bash.txt > /tmp/nozeros
+echo "first ten lines of /tmp/nozeros: "
+head -n10 /tmp/nozeros
+echo "last ten lines of /tmp/nozeros: "
+tail -n10 /tmp/nozeros

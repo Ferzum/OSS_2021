@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Good morning, $USER!"
+date; cal
+if [ -e /home/$USER/TODO ]; then
+	cat /home/$USER/TODO
+elif [[ !(-e /home/$USER/TODO) ]]; then
+	echo "You don't have TODO-list for today!"
+fi
+
+

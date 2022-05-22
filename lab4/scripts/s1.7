@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo -n "Now: "
+date "+%X --- %x"
+echo "These guys are logged now: "
+who
+echo "All users in system: "
+cut -d ":" -f1 /etc/passwd
+echo -n "Info about system's work: "
+uptime
+

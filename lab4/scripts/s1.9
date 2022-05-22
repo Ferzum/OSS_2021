@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ps -e --format="%mem rss cmd" | sort -rg | head -n5 # we can also use smth like this ps -eo cmd,%mem --sort=-%mem | head -n6
+
+echo "-----"
+
+ps -eo cmd,%mem,sz --sort=-%mem | head -n6

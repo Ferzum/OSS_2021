@@ -1,0 +1,23 @@
+#!/bin/bash
+
+dir () {
+	ls -la $1
+}
+
+echo "Directories: "
+dir | grep -e "^d"
+
+echo "Regular files: "
+dir | grep -e "^-"
+
+echo "Symbolic links: "
+dir | grep -e "^l"
+
+echo "Character devices: "
+dir | grep -e "^c"
+
+echo "Block devices: "
+dir | grep -e "^b"
+
+
+exit 0

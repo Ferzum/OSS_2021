@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "$USER's home directory contains $(ls -a /home/$USER | wc -w) elements and $(($(ls -a /home/$USER | wc -w) - $(ls /home/$USER | wc -w))) of them are hidden."
+
