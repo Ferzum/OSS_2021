@@ -1,0 +1,7 @@
+#!/bin/bash
+
+gcc -Wall 22.c -o 22.out && ./22.out && pstree $$
+
+gcc -Wall 23.c -o 23.out && ./23.out && pstree $$
+
+exit 0
