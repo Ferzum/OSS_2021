@@ -1,0 +1,90 @@
+  451  ps xaf
+  452  ps xawf -eo pid,user,cgroup,args
+  453  systemd-cgls
+  454  ls -l /usr/lib/systemd/system/
+  455  ls -l /run/systemd/system/
+  456  ls -l /etc/systemd/system/
+  457  systemctl -t help
+  458  systemctl status
+  459  systemctl --type=service
+  460  systemctl status NetworkManager.service
+  461  systemctl is-active NetworkManager.service
+  462  systemctl is-enabled NetworkManager.service
+  463  systemctl list-dependencies --after NetworkManager.service
+  464  systemctl list-dependencies --before NetworkManager.service
+  465  systemctl list-units --type=service
+  466  systemctl list-units --type=service --all
+  467  systemctl list-units --type=socket --all
+  468  systemctl list-unit-files --type=service
+  469  systemctl list-unit-files --type=service | grep enabled
+  470  systemctl list-unit-files --type=service | grep disabled
+  471  systemctl --failed --type=service
+  472  systemctl status httpd.service
+  473  sudo yum update httpd
+  474  sudo yum install httpd
+  475  systemctl status httpd.service
+  476  systemctl start httpd.service
+  477  systemctl status httpd.service
+  478  systemctl restart httpd.service
+  479  systemctl status httpd.service
+  480  systemctl stop httpd.service
+  481  systemctl enable httpd.service
+  482  systemctl status httpd.service 
+  483  systemctl start httpd.service 
+  484  systemctl status httpd.service 
+  485  systemctl disable httpd.service
+  486  systemctl status
+  487  systemctl mask httpd.service
+  488  systemctl start httpd.service
+  489  systemctl unmask httpd.service
+  490  systemctl list-units --type=target
+  491  systemctl list-units --type=target --all
+  492  systemctl get-default 
+  493  ls -l /etc/systemd/system/default.target
+  494  systemctl set-default multi-user.target
+  495  systemctl isolate multi-user.target
+  496  exit
+  497  systemctl --no-wall rescue
+  498  systemctl isolate rescue.target
+  499  systemctl --no-wall rescue
+  500  history
+  501  ping 8.8.8.8
+  502  systemctl isolate emergency.target
+  503  systemctl get-default 
+  504  systemctl set-default graphical.target
+  505  sudo systemctl set-default graphical.target
+  506  reboot
+  507  systemctl poweroff
+  508  systemctl halt
+  556  systemctl --no-wall poweroff
+  557  shutdown --poweroff 19:15
+  558  sudo shutdown --poweroff 19:15
+  559  shutdown -c 
+  560  shutdown -c
+  561  sudo shutdown -c
+  562  sudo shutdown --halt +10
+  563  sudo shutdown -c
+  564  systemctl --no-wall reboot
+  565  systemctl suspend
+  566  systemctl hibernate
+  567  hostnamectl 
+  568  timedatectl 
+  569  localectl 
+  570  loginctl 
+  571  loginctl session-status 2
+  572  loginctl session-status 1
+  573  loginctl show-user ferzum
+  578  vim mephi.service
+  579  cat mephi.service 
+  580  ls -lZ mephi.service 
+  581  journalctl -b
+  582  ausearch -m avc -ts recent
+  583  systemctl start mephi.service 
+  584  sudo restorecon -v mephi.service 
+  585  systemctl start mephi.service 
+  586  journalctl -u mephi.service 
+  587  cat mephi.path
+  588  systemctl enable mephi.path 
+  589  systemctl start mephi.path 
+  590  touch /tmp/mephi.file
+  591  history > history.txt
