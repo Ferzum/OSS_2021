@@ -1,0 +1,15 @@
+  605  uname -r
+  606  rpmdev-setuptree
+  608  yum install rpmdevtools
+  609  rpmdev-setuptree
+  610  yumdownloader --source kernel
+  611  rpm -i kernel-4.18.0-305.10.2.el7.centos.plus.src.rpm
+  612  ls rpmbuild/SPECS/
+  613  ls rpmbuild/SOURCES/
+  614  rpmbuild -bs ~/rpmbuild/SPECS/kernel.spec
+  615  ls ~/rpmbuild/SRPMS/
+  616  yum-builddep /home/ferzum/rpmbuild/SRPMS/kernel-4.18.0-305.10.2.el7.centos.plus.src.rpm 
+  617  rpmbuild -bp --target=$(uname -m) rpmbuild/SPECS/kernel.spec
+  618  cd rpmbuild/BUILD/kernel*/linux*
+  619  ls ~/rpmbuild/BUILD/kernel-4.18.0-305.10.2.el7/linux-4.18.0-305.10.2.el7.centos.plus.ferzum.x86_64/
+  620  history > history.txt
